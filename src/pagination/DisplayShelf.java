@@ -210,16 +210,18 @@ public class DisplayShelf extends Application {
 		P6.setTextFill(Color.rgb(125,40,186));
 		P6.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
 		container.getChildren().add(P6);
+
 		P6.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P7 = new Button("Paso 7");
 		P7.setOnAction( event -> {
 		    AnchorPane pocta = new AnchorPane();
-            Media die = new Media(getClass().getResource("/pagination/pb.mp4").toExternalForm());
+            Media die = new Media(getClass().getResource("/pagination/Ensambly.mp4").toExternalForm());
             MediaPlayer yanowe = new MediaPlayer(die);
             //yanowe.setAutoPlay(true); //POCTA
 			MediaView aiuda = new MediaView(yanowe);
             pocta.getChildren().add(aiuda);
+
 
 			Button Play = new Button(" Play ");
 			Play.setOnAction( t -> { yanowe.play();});
@@ -228,6 +230,7 @@ public class DisplayShelf extends Application {
 			Play.setTextFill(Color.rgb(176,32,170));
 			Play.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
 			pocta.getChildren().add(Play);
+            pocta.getChildren().get(0).setLayoutX(110);
 
 			Button Reset = new Button("Reset");
 			Reset.setOnAction( t -> { yanowe.stop();});
@@ -240,8 +243,8 @@ public class DisplayShelf extends Application {
 			pocta.getChildren().get(1).setLayoutX(15);
 			pocta.getChildren().get(1).setLayoutY(15);
 
-			pocta.getChildren().get(2).setLayoutX(110);
-			pocta.getChildren().get(2).setLayoutY(15);
+			pocta.getChildren().get(2).setLayoutX(15);
+			pocta.getChildren().get(2).setLayoutY(70);
 
 			//yanowe.setAutoPlay(true); //POCTA
 
