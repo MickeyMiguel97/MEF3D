@@ -76,7 +76,7 @@ public class DisplayShelf extends Application {
 				new Unit(getClass().getResource("/pagination/imgs/Condiciones.png").toString(),6),
 				new Unit(getClass().getResource("/pagination/imgs/Mallado.png").toString(),7),
 				new Unit(getClass().getResource("/pagination/imgs/Paso1.png").toString(),8),
-				new Unit(getClass().getResource("/pagination/imgs/Autor.png").toString(),9),
+				new Unit(getClass().getResource("/pagination/imgs/Paso2.png").toString(),9),
 				new Unit(getClass().getResource("/pagination/imgs/Autor.png").toString(),10),
 		};
 
@@ -168,7 +168,7 @@ public class DisplayShelf extends Application {
 		P1.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P2 = new Button("Paso 2");
-		P2.setOnAction( event -> slider.setValue(6));
+		P2.setOnAction( event -> slider.setValue(9));
 		P2.setLayoutX(-944);
 		P2.setLayoutY(120);
 		P2.setTextFill(Color.rgb(227,202,63));
