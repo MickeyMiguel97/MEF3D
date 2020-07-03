@@ -41,8 +41,9 @@ public class DisplayShelf extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 
-		String path = Test.class.getResource("/pagination/musi.mp3").toString();
-		Media media = new Media(path);
+		//String path = Test.class.getResource("/pagination/musi.mp3").toString();
+		//Media media = new Media(path);
+		Media media = new Media(getClass().getResource("/pagination/musi.mp3").toExternalForm());
 		MediaPlayer mp = new MediaPlayer(media);
 		mp.play();
 
@@ -51,10 +52,7 @@ public class DisplayShelf extends Application {
 		HostServices hs = getHostServices();
 		String folder = hs.resolveURI(hs.getDocumentBase(), "imgs/animals/");
 
-
-
 		int[] index = {0};
-
 
 		//Image imageInicio = new Image(getClass().getResourceAsStream("/imgs/animals/animal14"));
 		//ImageView imageViewInicio = new ImageView(imageInicio);
