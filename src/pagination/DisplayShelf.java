@@ -77,7 +77,17 @@ public class DisplayShelf extends Application {
 				new Unit(getClass().getResource("/pagination/imgs/Mallado.png").toString(),7),
 				new Unit(getClass().getResource("/pagination/imgs/Paso1.png").toString(),8),
 				new Unit(getClass().getResource("/pagination/imgs/Paso2.png").toString(),9),
-				new Unit(getClass().getResource("/pagination/imgs/Autor.png").toString(),10),
+				new Unit(getClass().getResource("/pagination/imgs/Paso3.png").toString(),10),
+				new Unit(getClass().getResource("/pagination/imgs/Paso4.png").toString(),11),
+				new Unit(getClass().getResource("/pagination/imgs/Paso5.png").toString(),12),
+				new Unit(getClass().getResource("/pagination/imgs/FormaFuerte.png").toString(),13),
+				new Unit(getClass().getResource("/pagination/imgs/Paso6.png").toString(),14),
+				new Unit(getClass().getResource("/pagination/imgs/FormaDebil.png").toString(),15),
+				new Unit(getClass().getResource("/pagination/imgs/FormaDebil.png").toString(),16),
+				new Unit(getClass().getResource("/pagination/imgs/FormaDebil.png").toString(),17),
+				new Unit(getClass().getResource("/pagination/imgs/Paso7.png").toString(),18),
+				new Unit(getClass().getResource("/pagination/imgs/Paso8.png").toString(),19),
+				new Unit(getClass().getResource("/pagination/imgs/Paso9.png").toString(),20),
 		};
 
 		Group container = new Group();
@@ -177,7 +187,7 @@ public class DisplayShelf extends Application {
 		P2.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P3 = new Button("Paso 3");
-		P3.setOnAction( event -> slider.setValue(7));
+		P3.setOnAction( event -> slider.setValue(10));
 		P3.setLayoutX(-844);
 		P3.setLayoutY(120);
 		P3.setTextFill(Color.rgb(159,223,68));
@@ -186,7 +196,7 @@ public class DisplayShelf extends Application {
 		P3.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P4 = new Button("Paso 4");
-		P4.setOnAction( event -> slider.setValue(8));
+		P4.setOnAction( event -> slider.setValue(11));
 		P4.setLayoutX(-744);
 		P4.setLayoutY(120);
 		P4.setTextFill(Color.rgb(31,154,54));
@@ -195,7 +205,7 @@ public class DisplayShelf extends Application {
 		P4.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P5 = new Button("Paso 5");
-		P5.setOnAction( event -> slider.setValue(9));
+		P5.setOnAction( event -> slider.setValue(12));
 		P5.setLayoutX(-644);
 		P5.setLayoutY(120);
 		P5.setTextFill(Color.rgb(2,93,190));
@@ -204,7 +214,7 @@ public class DisplayShelf extends Application {
 		P5.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P6 = new Button("Paso 6");
-		P6.setOnAction( event -> slider.setValue(9));
+		P6.setOnAction( event -> slider.setValue(14));
 		P6.setLayoutX(-544);
 		P6.setLayoutY(120);
 		P6.setTextFill(Color.rgb(125,40,186));
@@ -266,10 +276,11 @@ public class DisplayShelf extends Application {
 		Button P8 = new Button("Paso 8");
 		P8.setOnAction( event -> {
 			AnchorPane pocta = new AnchorPane();
-			Media die = new Media(getClass().getResource("/pagination/pb.mp4").toExternalForm());
+			Media die = new Media(getClass().getResource("/pagination/NeuyDir.mp4").toExternalForm());
 			MediaPlayer yanowe = new MediaPlayer(die);
 			MediaView aiuda = new MediaView(yanowe);
 			pocta.getChildren().add(aiuda);
+			pocta.getChildren().get(0).setLayoutX(110);
 
 			Button Play = new Button(" Play ");
 			Play.setOnAction( t -> { yanowe.play();});
@@ -290,8 +301,8 @@ public class DisplayShelf extends Application {
 			pocta.getChildren().get(1).setLayoutX(15);
 			pocta.getChildren().get(1).setLayoutY(15);
 
-			pocta.getChildren().get(2).setLayoutX(110);
-			pocta.getChildren().get(2).setLayoutY(15);
+			pocta.getChildren().get(2).setLayoutX(15);
+			pocta.getChildren().get(2).setLayoutY(70);
 
 			//yanowe.setAutoPlay(true); //POCTA
 
@@ -310,6 +321,16 @@ public class DisplayShelf extends Application {
 		P8.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
 		container.getChildren().add(P8);
 		P8.translateXProperty().bind(stage.widthProperty().subtract(15));
+
+		Button P9 = new Button("Paso 9");
+		P9.setOnAction( event -> slider.setValue(20));
+		P9.setLayoutX(-244);
+		P9.setLayoutY(120);
+		P9.setTextFill(Color.rgb(0,0,0));
+		P9.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
+		container.getChildren().add(P9);
+
+		P9.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		slider.setValue(3); //iniciar en la imagen 3
 	}
