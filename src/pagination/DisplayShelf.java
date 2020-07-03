@@ -31,7 +31,7 @@ import sun.util.resources.cldr.lu.CurrencyNames_lu;
 
 // DisplayShelf
 public class DisplayShelf extends Application {
-
+	//Idea original: http://naaspati-javafx.blogspot.com/2017/11/image-carousel.html Gracias al autor
 	private Image Image;
 
 	public static void main(String[] args) {
@@ -45,6 +45,7 @@ public class DisplayShelf extends Application {
 		//Media media = new Media(path);
 		Media media = new Media(getClass().getResource("/pagination/music.mp3").toExternalForm());
 		MediaPlayer mp = new MediaPlayer(media);
+		mp.setCycleCount(MediaPlayer.INDEFINITE);
 		mp.play();
 
 		System.out.println("Playing...");
@@ -66,17 +67,17 @@ public class DisplayShelf extends Application {
 						.toArray(Unit[]::new);*/
 
 		Unit[] images = {
-				new Unit(getClass().getResource("/pagination/imgs/A.jpeg").toString(),0),
-				new Unit(getClass().getResource("/pagination/imgs/B.jpeg").toString(),1),
-				new Unit(getClass().getResource("/pagination/imgs/C.jpg").toString(),2),
-				new Unit(getClass().getResource("/pagination/imgs/D.jpeg").toString(),3),
-				new Unit(getClass().getResource("/pagination/imgs/E.jpeg").toString(),4),
-				new Unit(getClass().getResource("/pagination/imgs/F.jpeg").toString(),5),
-				new Unit(getClass().getResource("/pagination/imgs/FF.png").toString(),6),
-				new Unit(getClass().getResource("/pagination/imgs/G.jpeg").toString(),7),
-				new Unit(getClass().getResource("/pagination/imgs/H.jpeg").toString(),8),
-				new Unit(getClass().getResource("/pagination/imgs/I.jpeg").toString(),9),
-				new Unit(getClass().getResource("/pagination/imgs/J.jpeg").toString(),10),
+				new Unit(getClass().getResource("/pagination/imgs/Agradecimiento2.png").toString(),0),
+				new Unit(getClass().getResource("/pagination/imgs/Agradecimiento1.png").toString(),1),
+				new Unit(getClass().getResource("/pagination/imgs/Autor.png").toString(),2),
+				new Unit(getClass().getResource("/pagination/imgs/Welcome.gif").toString(),3),
+				new Unit(getClass().getResource("/pagination/imgs/Modelo.png").toString(),4),
+				new Unit(getClass().getResource("/pagination/imgs/Dominio.png").toString(),5),
+				new Unit(getClass().getResource("/pagination/imgs/Condiciones.png").toString(),6),
+				new Unit(getClass().getResource("/pagination/imgs/Mallado.png").toString(),7),
+				new Unit(getClass().getResource("/pagination/imgs/Paso1.png").toString(),8),
+				new Unit(getClass().getResource("/pagination/imgs/Autor.png").toString(),9),
+				new Unit(getClass().getResource("/pagination/imgs/Autor.png").toString(),10),
 		};
 
 		Group container = new Group();
@@ -140,7 +141,7 @@ public class DisplayShelf extends Application {
 		close.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button Modelo = new Button("Modelo");
-		Modelo.setOnAction( event -> slider.setValue(3));
+		Modelo.setOnAction( event -> slider.setValue(4));
 		Modelo.setLayoutX(-1257);
 		Modelo.setLayoutY(120);
 		Modelo.setTextFill(Color.rgb(178,19,31));
@@ -149,7 +150,7 @@ public class DisplayShelf extends Application {
 		Modelo.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button Dominio = new Button("Dominio");
-		Dominio.setOnAction( event -> slider.setValue(4));
+		Dominio.setOnAction( event -> slider.setValue(5));
 		Dominio.setLayoutX(-1153);
 		Dominio.setLayoutY(120);
 		Dominio.setTextFill(Color.rgb(232,34,47));
@@ -158,7 +159,7 @@ public class DisplayShelf extends Application {
 		Dominio.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P1 = new Button("Paso 1");
-		P1.setOnAction( event -> slider.setValue(5));
+		P1.setOnAction( event -> slider.setValue(8));
 		P1.setLayoutX(-1044);
 		P1.setLayoutY(120);
 		P1.setTextFill(Color.rgb(255,165,59));
@@ -307,7 +308,7 @@ public class DisplayShelf extends Application {
 		container.getChildren().add(P8);
 		P8.translateXProperty().bind(stage.widthProperty().subtract(15));
 
-		slider.setValue(2); //iniciar en la imagen 3
+		slider.setValue(3); //iniciar en la imagen 3
 	}
 
 	private static class Unit extends ImageView {
@@ -324,7 +325,7 @@ public class DisplayShelf extends Application {
 
 		public Unit(String imageUrl, int index) {
 			super(imageUrl);
-			setLayoutY(350);//mover pa abajo
+			setLayoutY(650);//mover pa abajo
 			setFitWidth(510);
 			setFitHeight(350);
 			setEffect(reflection);
@@ -335,7 +336,8 @@ public class DisplayShelf extends Application {
 		}
 		public void update(int currentIndex, double width, double height) {
 			int ef = index - currentIndex;
-			double middle = width / 2 - 200; //ubicacion de la imagen
+			double middle = 400; // 2 - 500; //ubicacion de la imagen
+			System.out.println(middle);
 			boolean b = ef < 2; //ocula la siguiente imagen
 
 			setTranslateY(height/2 - getImage().getHeight()/1.5); //ubicacion de la imagen
