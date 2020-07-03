@@ -43,7 +43,7 @@ public class DisplayShelf extends Application {
 
 		//String path = Test.class.getResource("/pagination/musi.mp3").toString();
 		//Media media = new Media(path);
-		Media media = new Media(getClass().getResource("/pagination/musi.mp3").toExternalForm());
+		Media media = new Media(getClass().getResource("/pagination/music.mp3").toExternalForm());
 		MediaPlayer mp = new MediaPlayer(media);
 		mp.play();
 
@@ -59,11 +59,25 @@ public class DisplayShelf extends Application {
 
 		//Unit[] images = {imageInicio};
 
-		Unit[] images =
+		/*Unit[] images =
 				Stream.of(new File(new URI(folder).getPath()).list())
 						.map(name -> hs.resolveURI(folder, name))
 						.map(url -> new Unit(url, index[0]++))
-						.toArray(Unit[]::new);
+						.toArray(Unit[]::new);*/
+
+		Unit[] images = {
+				new Unit(getClass().getResource("/pagination/imgs/A.jpeg").toString(),0),
+				new Unit(getClass().getResource("/pagination/imgs/B.jpeg").toString(),1),
+				new Unit(getClass().getResource("/pagination/imgs/C.jpg").toString(),2),
+				new Unit(getClass().getResource("/pagination/imgs/D.jpeg").toString(),3),
+				new Unit(getClass().getResource("/pagination/imgs/E.jpeg").toString(),4),
+				new Unit(getClass().getResource("/pagination/imgs/F.jpeg").toString(),5),
+				new Unit(getClass().getResource("/pagination/imgs/FF.png").toString(),6),
+				new Unit(getClass().getResource("/pagination/imgs/G.jpeg").toString(),7),
+				new Unit(getClass().getResource("/pagination/imgs/H.jpeg").toString(),8),
+				new Unit(getClass().getResource("/pagination/imgs/I.jpeg").toString(),9),
+				new Unit(getClass().getResource("/pagination/imgs/J.jpeg").toString(),10),
+		};
 
 		Group container = new Group();
 		container.setStyle("-fx-background-color:derive(black, 20%)");
@@ -119,7 +133,7 @@ public class DisplayShelf extends Application {
 		//close.setOnAction(event -> slider.setValue(4));
 		close.getStyleClass().clear();
 		//close.setTextFill(Color.rgb(255,0,0));
-		close.setLayoutX(-15);
+		close.setLayoutX(-18);
 		close.setLayoutY(5);
 		close.setStyle("-fx-text-fill:red;-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
 		container.getChildren().add(close);
@@ -127,7 +141,7 @@ public class DisplayShelf extends Application {
 
 		Button Modelo = new Button("Modelo");
 		Modelo.setOnAction( event -> slider.setValue(3));
-		Modelo.setLayoutX(-1050);
+		Modelo.setLayoutX(-1257);
 		Modelo.setLayoutY(120);
 		Modelo.setTextFill(Color.rgb(178,19,31));
 		Modelo.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
@@ -136,7 +150,7 @@ public class DisplayShelf extends Application {
 
 		Button Dominio = new Button("Dominio");
 		Dominio.setOnAction( event -> slider.setValue(4));
-		Dominio.setLayoutX(-950);
+		Dominio.setLayoutX(-1153);
 		Dominio.setLayoutY(120);
 		Dominio.setTextFill(Color.rgb(232,34,47));
 		Dominio.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
@@ -145,7 +159,7 @@ public class DisplayShelf extends Application {
 
 		Button P1 = new Button("Paso 1");
 		P1.setOnAction( event -> slider.setValue(5));
-		P1.setLayoutX(-800);
+		P1.setLayoutX(-1044);
 		P1.setLayoutY(120);
 		P1.setTextFill(Color.rgb(255,165,59));
 		P1.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
@@ -154,7 +168,7 @@ public class DisplayShelf extends Application {
 
 		Button P2 = new Button("Paso 2");
 		P2.setOnAction( event -> slider.setValue(6));
-		P2.setLayoutX(-700);
+		P2.setLayoutX(-944);
 		P2.setLayoutY(120);
 		P2.setTextFill(Color.rgb(227,202,63));
 		P2.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
@@ -163,7 +177,7 @@ public class DisplayShelf extends Application {
 
 		Button P3 = new Button("Paso 3");
 		P3.setOnAction( event -> slider.setValue(7));
-		P3.setLayoutX(-600);
+		P3.setLayoutX(-844);
 		P3.setLayoutY(120);
 		P3.setTextFill(Color.rgb(159,223,68));
 		P3.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
@@ -172,7 +186,7 @@ public class DisplayShelf extends Application {
 
 		Button P4 = new Button("Paso 4");
 		P4.setOnAction( event -> slider.setValue(8));
-		P4.setLayoutX(-500);
+		P4.setLayoutX(-744);
 		P4.setLayoutY(120);
 		P4.setTextFill(Color.rgb(31,154,54));
 		P4.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
@@ -181,7 +195,7 @@ public class DisplayShelf extends Application {
 
 		Button P5 = new Button("Paso 5");
 		P5.setOnAction( event -> slider.setValue(9));
-		P5.setLayoutX(-400);
+		P5.setLayoutX(-644);
 		P5.setLayoutY(120);
 		P5.setTextFill(Color.rgb(2,93,190));
 		P5.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
@@ -190,7 +204,7 @@ public class DisplayShelf extends Application {
 
 		Button P6 = new Button("Paso 6");
 		P6.setOnAction( event -> slider.setValue(9));
-		P6.setLayoutX(-400);
+		P6.setLayoutX(-544);
 		P6.setLayoutY(120);
 		P6.setTextFill(Color.rgb(125,40,186));
 		P6.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
@@ -202,10 +216,35 @@ public class DisplayShelf extends Application {
 		    AnchorPane pocta = new AnchorPane();
             Media die = new Media(getClass().getResource("/pagination/pb.mp4").toExternalForm());
             MediaPlayer yanowe = new MediaPlayer(die);
-            yanowe.setAutoPlay(true); //POCTA
+            //yanowe.setAutoPlay(true); //POCTA
 			MediaView aiuda = new MediaView(yanowe);
             pocta.getChildren().add(aiuda);
-            pocta.setMaxHeight(500);
+
+			Button Play = new Button(" Play ");
+			Play.setOnAction( t -> { yanowe.play();});
+			Play.setLayoutX(15);
+			Play.setLayoutY(15);
+			Play.setTextFill(Color.rgb(176,32,170));
+			Play.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
+			pocta.getChildren().add(Play);
+
+			Button Reset = new Button("Reset");
+			Reset.setOnAction( t -> { yanowe.stop();});
+			Reset.setLayoutX(30);
+			Reset.setLayoutY(15);
+			Reset.setTextFill(Color.rgb(176,32,170));
+			Reset.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
+			pocta.getChildren().add(Reset);
+
+			pocta.getChildren().get(1).setLayoutX(15);
+			pocta.getChildren().get(1).setLayoutY(15);
+
+			pocta.getChildren().get(2).setLayoutX(110);
+			pocta.getChildren().get(2).setLayoutY(15);
+
+			//yanowe.setAutoPlay(true); //POCTA
+
+			pocta.setMaxHeight(500);
             pocta.setMaxWidth(500);
 			Scene video = new Scene(pocta, 500, 500, true);//tamaño de la scena
             Stage enma = new Stage();
@@ -213,7 +252,7 @@ public class DisplayShelf extends Application {
             enma.setScene(video);
             enma.show();
 		});
-        P7.setLayoutX(-300);
+        P7.setLayoutX(-444);
         P7.setLayoutY(120);
         P7.setTextFill(Color.rgb(176,32,170));
         P7.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
@@ -228,27 +267,27 @@ public class DisplayShelf extends Application {
 			MediaView aiuda = new MediaView(yanowe);
 			pocta.getChildren().add(aiuda);
 
-			Button Play = new Button("Play");
+			Button Play = new Button(" Play ");
 			Play.setOnAction( t -> { yanowe.play();});
-			Play.setLayoutX(-200);
-			Play.setLayoutY(120);
-			Play.setTextFill(Color.rgb(125,40,186));
+			Play.setLayoutX(15);
+			Play.setLayoutY(15);
+			Play.setTextFill(Color.rgb(127,82,69));
 			Play.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
 			pocta.getChildren().add(Play);
 
 			Button Reset = new Button("Reset");
 			Reset.setOnAction( t -> { yanowe.stop();});
-			Reset.setLayoutX(-300);
-			Reset.setLayoutY(120);
-			Reset.setTextFill(Color.rgb(125,40,186));
+			Reset.setLayoutX(30);
+			Reset.setLayoutY(15);
+			Reset.setTextFill(Color.rgb(127,82,69));
 			Reset.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
 			pocta.getChildren().add(Reset);
 
-			pocta.getChildren().get(1).setLayoutX(100);
-			pocta.getChildren().get(1).setLayoutY(120);
+			pocta.getChildren().get(1).setLayoutX(15);
+			pocta.getChildren().get(1).setLayoutY(15);
 
-			pocta.getChildren().get(2).setLayoutX(300);
-			pocta.getChildren().get(2).setLayoutY(500);
+			pocta.getChildren().get(2).setLayoutX(110);
+			pocta.getChildren().get(2).setLayoutY(15);
 
 			//yanowe.setAutoPlay(true); //POCTA
 
@@ -261,14 +300,14 @@ public class DisplayShelf extends Application {
 			enma.setScene(video);
 			enma.show();
 		});
-		P8.setLayoutX(-300);
+		P8.setLayoutX(-344);
 		P8.setLayoutY(120);
 		P8.setTextFill(Color.rgb(127,82,69));
 		P8.setStyle("-fx-font-size:20;-fx-font-weight:bold;-fx-font-family:'Comic Sans MS';");
 		container.getChildren().add(P8);
 		P8.translateXProperty().bind(stage.widthProperty().subtract(15));
 
-		slider.setValue(2); //iniciar en la imagen 0
+		slider.setValue(2); //iniciar en la imagen 3
 	}
 
 	private static class Unit extends ImageView {

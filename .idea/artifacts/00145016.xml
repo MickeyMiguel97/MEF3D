@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="00145016">
+    <output-path>$PROJECT_DIR$/classes/artifacts/00145016</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="pagination.DisplayShelf" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Image.jar">
+        <element id="module-output" name="Image" />
+      </element>
+    </root>
+  </artifact>
+</component>
