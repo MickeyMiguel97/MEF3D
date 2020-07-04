@@ -83,11 +83,21 @@ public class DisplayShelf extends Application {
 				new Unit(getClass().getResource("/pagination/imgs/FormaFuerte.png").toString(),13),
 				new Unit(getClass().getResource("/pagination/imgs/Paso6.png").toString(),14),
 				new Unit(getClass().getResource("/pagination/imgs/FormaDebil.png").toString(),15),
-				new Unit(getClass().getResource("/pagination/imgs/FormaDebil.png").toString(),16),
-				new Unit(getClass().getResource("/pagination/imgs/FormaDebil.png").toString(),17),
-				new Unit(getClass().getResource("/pagination/imgs/Paso7.png").toString(),18),
-				new Unit(getClass().getResource("/pagination/imgs/Paso8.png").toString(),19),
-				new Unit(getClass().getResource("/pagination/imgs/Paso9.png").toString(),20),
+				new Unit(getClass().getResource("/pagination/imgs/Comp0.png").toString(),16),
+				new Unit(getClass().getResource("/pagination/imgs/Comp1.png").toString(),17),
+				new Unit(getClass().getResource("/pagination/imgs/CompC.png").toString(),18),
+				new Unit(getClass().getResource("/pagination/imgs/CompC2.png").toString(),19),
+				new Unit(getClass().getResource("/pagination/imgs/CompL.png").toString(),20),
+				new Unit(getClass().getResource("/pagination/imgs/CompL2.png").toString(),21),
+				new Unit(getClass().getResource("/pagination/imgs/CompI.png").toString(),22),
+				new Unit(getClass().getResource("/pagination/imgs/CompI2.png").toString(),23),
+				new Unit(getClass().getResource("/pagination/imgs/CompH.png").toString(),24),
+				new Unit(getClass().getResource("/pagination/imgs/CompH2.png").toString(),25),
+				new Unit(getClass().getResource("/pagination/imgs/CompF.png").toString(),26),
+				new Unit(getClass().getResource("/pagination/imgs/CompG.png").toString(),27),
+				new Unit(getClass().getResource("/pagination/imgs/Paso7.png").toString(),28),
+				new Unit(getClass().getResource("/pagination/imgs/Paso8.png").toString(),29),
+				new Unit(getClass().getResource("/pagination/imgs/Paso9.png").toString(),30),
 		};
 
 		Group container = new Group();
@@ -224,6 +234,7 @@ public class DisplayShelf extends Application {
 		P6.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P7 = new Button("Paso 7");
+		P7.setOnAction( m -> slider.setValue(28));
 		P7.setOnAction( event -> {
 		    AnchorPane pocta = new AnchorPane();
             Media die = new Media(getClass().getResource("/pagination/Ensambly.mp4").toExternalForm());
@@ -274,6 +285,7 @@ public class DisplayShelf extends Application {
         P7.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P8 = new Button("Paso 8");
+		P8.setOnAction( m -> slider.setValue(29));
 		P8.setOnAction( event -> {
 			AnchorPane pocta = new AnchorPane();
 			Media die = new Media(getClass().getResource("/pagination/NeuyDir.mp4").toExternalForm());
@@ -323,7 +335,7 @@ public class DisplayShelf extends Application {
 		P8.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P9 = new Button("Paso 9");
-		P9.setOnAction( event -> slider.setValue(20));
+		P9.setOnAction( event -> slider.setValue(30));
 		P9.setLayoutX(-244);
 		P9.setLayoutY(120);
 		P9.setTextFill(Color.rgb(0,0,0));
