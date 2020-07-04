@@ -234,8 +234,9 @@ public class DisplayShelf extends Application {
 		P6.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P7 = new Button("Paso 7");
-		P7.setOnAction( m -> slider.setValue(28));
+		//P7.setOnAction( m -> slider.setValue(28));
 		P7.setOnAction( event -> {
+			slider.setValue(28);
 		    AnchorPane pocta = new AnchorPane();
             Media die = new Media(getClass().getResource("/pagination/Ensambly.mp4").toExternalForm());
             MediaPlayer yanowe = new MediaPlayer(die);
@@ -285,8 +286,9 @@ public class DisplayShelf extends Application {
         P7.translateXProperty().bind(stage.widthProperty().subtract(15));
 
 		Button P8 = new Button("Paso 8");
-		P8.setOnAction( m -> slider.setValue(29));
+		//P8.setOnAction( m -> slider.setValue(29));
 		P8.setOnAction( event -> {
+			slider.setValue(29);
 			AnchorPane pocta = new AnchorPane();
 			Media die = new Media(getClass().getResource("/pagination/NeuyDir.mp4").toExternalForm());
 			MediaPlayer yanowe = new MediaPlayer(die);
