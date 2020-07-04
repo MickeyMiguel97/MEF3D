@@ -6,10 +6,15 @@
         <option name="appClass" value="pagination.DisplayShelf" />
         <option name="description" value="" />
         <option name="htmlPlaceholderId" value="" />
+        <option name="icons">
+          <JavaFxApplicationIcons>
+            <option name="windowsIcon" value="$PROJECT_DIR$/src/pagination/Icono.ico" />
+          </JavaFxApplicationIcons>
+        </option>
         <option name="nativeBundle" value="all" />
-        <option name="title" value="" />
-        <option name="vendor" value="" />
-        <option name="version" value="" />
+        <option name="title" value="MEF 3D" />
+        <option name="vendor" value="Miguel Gonzalez" />
+        <option name="version" value="1.0" />
       </options>
     </properties>
     <root id="root">
